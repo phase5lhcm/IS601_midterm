@@ -9,6 +9,6 @@ class SubtractCommand(Command):
         self.second_operand = second_operand
     
     def execute(self):
-        log.info()
+        log.info("Running subtraction operation")
         Validator.validate(self.first_operand, "Value must be greater than zero")
         return self.first_operand - self.second_operand

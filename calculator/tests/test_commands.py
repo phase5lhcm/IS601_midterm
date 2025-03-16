@@ -17,21 +17,21 @@ def test_add_command(a,b,expected):
     command = AddCommand(a, b)
     assert command.execute() == expected 
 
-# @pytest.mark.parametrize("a, b, expected", [
-#     (fake.random_int(min=-100, max=100), fake.random_int(min=-100, max=100), lambda a, b: a - b)
-#     for _ in range(5)  
-# ])
-# def test_subtract_command(a, b, expected):
-#     command = SubtractCommand(a, b, expected)
-#     assert command.execute() == a - b
+@pytest.mark.parametrize("a, b, expected", [
+    (a, b, a - b) 
+    for a, b in [(fake.random_int(min=-100, max=100), fake.random_int(min=-100, max=100)) for _ in range(5)]
+])
+def test_subtract_command(a, b, expected):
+    command = SubtractCommand(a, b)
+    assert command.execute() == expected
 
-# pytest.mark.parametrize("a, b, expected", [
-#     (fake.random_int(min=-10, max=10), fake.random_int(min=-10, max=10), lambda a, b: a * b)
-#     for _ in range(5)
+# @pytest.mark.parametrize("a, b, expected", [
+#     (a, b, a * b) 
+#     for a, b in [(fake.random_int(min=-100, max=100), fake.random_int(min=-100, max=100)) for _ in range(5)]
 # ])
 # def test_multiply_command(a, b, expected):
-#     command = MultiplyCommand(a, b, expected)
-#     assert command.execute() == a * b
+#     command = MultiplyCommand(a, b)
+#     assert command.execute() == expected
 
 # @pytest.mark.parametrize("a, b, expected", [
 #     (fake.random_int(min=1, max=100), fake.random_int(min=1, max=10), lambda a, b: a / b)
