@@ -2,7 +2,7 @@
 from abc import ABC, abstractmethod
 
 
-class CustomCommand(ABC):
+class CustomOperation(ABC):
     """A base class for the plugins"""
     @abstractmethod
     def execute(self, a, b):
