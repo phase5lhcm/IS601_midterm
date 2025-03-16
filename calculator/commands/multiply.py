@@ -9,5 +9,5 @@ class MultiplyCommand(Command):
         self.second_operand = second_operand
     
     def execute(self):
-        log.info()
+        log.info("Running multiplication operation")
         return self.first_operand * self.second_operand
