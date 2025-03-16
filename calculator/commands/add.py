@@ -7,4 +7,4 @@ class AddCommand(Command):
         self.b = b
     
     def execute(self):
-        print(self.a + self.b)
+        return self.a + self.b
