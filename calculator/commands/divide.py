@@ -3,7 +3,7 @@ from .commands import Command
 from ..utils.validator import Validator
 
 
-class Divide(Command):
+class DivideCommand(Command):
     def __init__(self, first_operand, second_operand):
         self.first_operand = first_operand
         self.second_operand = second_operand

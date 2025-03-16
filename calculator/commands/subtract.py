@@ -3,7 +3,7 @@ from commands import Command
 from ..utils.validator import Validator
 import logging as log
 
-class Subtract(Command):
+class SubtractCommand(Command):
     def __init__(self, first_operand, second_operand):
         self.first_operand = first_operand
         self.second_operand = second_operand
