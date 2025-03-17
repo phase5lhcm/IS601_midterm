@@ -15,11 +15,12 @@ def main():
         print("2. Subtract")
         print("3. Multiply")
         print("4. Divide")
-        print("5. Exit")
+        print("5. Power")
+        print("6. Exit")
 
         choice = input("Select an operation from choices 1-5: ")
 
-        if choice == "5":
+        if choice == "6":
             print("Exiting calculator. Invalid Selection")
             break
 
