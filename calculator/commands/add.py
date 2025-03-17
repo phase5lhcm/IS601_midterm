@@ -1,5 +1,5 @@
 #Inheirits from the Command base class to implement the addition operation via the execute method
-from .commands import Command
+from calculator.commands.command import Command
 import logging as log
 
 class AddCommand(Command):

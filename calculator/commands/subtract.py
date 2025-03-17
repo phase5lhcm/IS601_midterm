@@ -1,5 +1,5 @@
 #Inheirits from the Command base class to implement the subtraction operation via the execute method
-from .commands import Command
+from calculator.commands.command import Command
 from ..utils.validator import Validator
 import logging as log
 

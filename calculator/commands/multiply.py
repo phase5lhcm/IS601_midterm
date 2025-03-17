@@ -1,6 +1,5 @@
 #Inheirits from the Command base class to implement the multiplication operation via the execute method
-from .commands import Command
-from ..utils.validator import Validator
+from calculator.commands.command import Command
 import logging as log
 
 class MultiplyCommand(Command):
