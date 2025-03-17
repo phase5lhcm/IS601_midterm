@@ -1,6 +1,6 @@
 import pytest
 from faker import Faker
-from history_manager import HistoryManager
+from calculator.history_manager import HistoryManager
 
 faker = Faker()
 
