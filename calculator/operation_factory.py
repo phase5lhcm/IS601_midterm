@@ -2,6 +2,7 @@ from calculator.commands.add import AddCommand
 from calculator.commands.divide import DivideCommand
 from calculator.commands.multiply import MultiplyCommand
 from calculator.commands.subtract import SubtractCommand
+from calculator.strategy.power import PowerOperation
 
 
 class OperationFactory:
@@ -14,6 +15,7 @@ class OperationFactory:
             "SUBTRACT": SubtractCommand,
             "MULTIPLY": MultiplyCommand,
             "DIVIDE": DivideCommand,
+            "POWER": PowerOperation,
         }
         command = command.upper()
         if command not in commands:
