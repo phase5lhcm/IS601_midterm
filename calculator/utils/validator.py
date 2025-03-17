@@ -1,4 +1,5 @@
-#Evaluates operand values to ensure they are greater than zero
+# Evaluates operand values to ensure they are greater than zero
+
 
 class Validator:
     @staticmethod

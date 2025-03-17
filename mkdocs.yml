@@ -1,0 +1,18 @@
+site_name: Calculator Documentation
+nav:
+  - Home: index.md
+  - Overview: overview.md
+  - Design Patterns:
+      - Facade Pattern: design_patterns/facade.md
+      - Factory Method: design_patterns/factory.md
+      - Singleton: design_patterns/singleton.md
+      - Strategy: design_patterns/strategy.md
+      - Command: design_patterns/command.md
+  - Installation: installation.md
+  - Usage: usage.md
+  - Code Overview: code_overview.md
+  - Contributing: contributing.md
+  - License: license.md
+
+theme:
+  name: mkdocs
