@@ -1,7 +1,8 @@
 from calculator.commands.add import AddCommand
-from calculator.commands.subtract import SubtractCommand
-from calculator.commands.multiply import MultiplyCommand
 from calculator.commands.divide import DivideCommand
+from calculator.commands.multiply import MultiplyCommand
+from calculator.commands.subtract import SubtractCommand
+
 
 class OperationFactory:
     """Factory that creates instances of each arithmetic operation when user specifies from menu"""
@@ -12,11 +13,9 @@ class OperationFactory:
             "ADD": AddCommand,
             "SUBTRACT": SubtractCommand,
             "MULTIPLY": MultiplyCommand,
-            "DIVIDE": DivideCommand
+            "DIVIDE": DivideCommand,
         }
         command = command.upper()
         if command not in commands:
-             return None
+            return None
         return commands[command](a, b)
-    
-

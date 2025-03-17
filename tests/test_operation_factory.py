@@ -18,7 +18,7 @@
 # def test_factory_operations(operation, command_class, func, a, b):
 #     if operation == "DIVIDE" and b == 0:
 #         b = 1  # Avoid division by zero error in test cases
-    
+
 #     operation_instance = OperationFactory.get_operation(operation, a, b)
 #     assert isinstance(operation_instance, command_class)
 #     assert operation_instance.execute() == func(a, b)
