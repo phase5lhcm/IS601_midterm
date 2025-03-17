@@ -27,7 +27,7 @@ class HistoryManager:
     
     def save_history(self):
         """Stores history in  csv file"""
-        self.hisory.to_csv(self.FILE_PATH, index=False)
+        self.history.to_csv(self.FILE_PATH, index=False)
         log.info("Saved to csv file")
 
     def add_record(self, operation, operand1, operand2, result):
