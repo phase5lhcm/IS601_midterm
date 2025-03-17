@@ -16,3 +16,5 @@ pytz==2025.1
 rich==13.9.4
 six==1.17.0
 tzdata==2025.1
+Faker==37.0.0
+tzdata==2025.1
