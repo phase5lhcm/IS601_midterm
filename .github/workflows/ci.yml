@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - develop 
   pull_request:
     branches:
       - main
+      - develop 
 
 jobs:
   test:
@@ -23,14 +25,14 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m venv venv
-          source venv/bin/activate
-          pip install -r requirements.txt
+          python -m pip install --upgrade pip
+          pip install flake8 pytest
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Verify Tests Directory Exists
-        run: ls -R
-        
-      - name: Run tests
+      - name: Debug File Structure
+        run: ls -R 
+
+      - name: Run Tests with pytest
         run: |
-          source venv/bin/activate
-          pytest tests/
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
+          pytest
