@@ -33,3 +33,8 @@ class CalculatorFacade:
         """Displays the calculation history."""
         log.info("Displaying history")
         self.history_manager.display_history()
+
+    def delete_history(self):
+        """Deletes the entire csv file"""
+        self.history_manager.delete_history()
+        log.info("History deleted")
