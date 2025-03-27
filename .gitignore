@@ -21,3 +21,4 @@ Thumbs.db
 history.csv  # Ignores calculation history file
 
 site/
+.coverage
