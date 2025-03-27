@@ -65,7 +65,7 @@ class HistoryManager:
 
     def recreate_file(self):
         """Recreates the CSV file with headers."""
-        with open(self.FILE_NAME, "w") as file:
+        with open(self.USER_HISTORY, "w") as file:
             file.write("Operation,Operand1,Operand2,Result\n")
         print("New history file created with headers.")
         logger.info("New history file created with headers.")

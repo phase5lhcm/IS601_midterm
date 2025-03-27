@@ -1,7 +1,7 @@
 import pytest
 from faker import Faker
 
-from calculator.calculator import CalculatorFacade
+from calculator.facade.calculator import CalculatorFacade
 
 faker = Faker()
 

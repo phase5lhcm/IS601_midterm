@@ -1,7 +1,7 @@
 import logging
 
-from calculator.history_manager import HistoryManager
-from calculator.operation_factory import OperationFactory
+from calculator.factory.operation_factory import OperationFactory
+from calculator.singleton.history_manager import HistoryManager
 
 # Configure logging
 logging.basicConfig(

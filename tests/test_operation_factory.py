@@ -1,6 +1,6 @@
 # import pytest
 # from faker import Faker
-# from calculator.operation_factory import OperationFactory
+# from calculator.factory.operation_factory import OperationFactory
 # from calculator.commands.add import AddCommand
 # from calculator.commands.subtract import SubtractCommand
 # from calculator.commands.multiply import MultiplyCommand
