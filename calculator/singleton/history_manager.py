@@ -7,6 +7,7 @@ logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
 logger = logging.getLogger(__name__)
+# calculator/singleton/history_manager.py                 42     14    67%   34-36, 61-64, 68-71, 74-78
 
 
 class HistoryManager:
