@@ -3,23 +3,31 @@ import time
 
 import pytest
 
-from calculator.singleton.history_manager import HistoryManager
-
 # Ensure you're working with the singleton instance globally
-history_manager = HistoryManager()
 
 
 @pytest.fixture
 def manager():
     """Fixture to use the global HistoryManager instance"""
+    from calculator.singleton.history_manager import \
+        HistoryManager  # Import at the function level to avoid circular imports
+
+    HistoryManager._instance = (
+        None  # Reset the singleton for each test where manager is called
+    )
+
+    history_manager = HistoryManager()
     yield history_manager
-    # Clean up after tests
+
+    # Clean up the file after the test
     if os.path.exists(history_manager.USER_HISTORY):
         os.remove(history_manager.USER_HISTORY)
 
 
 def test_instance_type(manager):
     """Ensure the manager is an instance of HistoryManager"""
+    from calculator.singleton.history_manager import HistoryManager
+
     assert isinstance(manager, HistoryManager)
 
 
