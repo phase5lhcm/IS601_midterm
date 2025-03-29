@@ -1,4 +1,5 @@
 import os
+import time
 
 import pytest
 
@@ -32,6 +33,8 @@ def test_delete_history(manager):
     """Test deleting the history file"""
     manager.recreate_file()
     manager.delete_history()
+
+    time.sleep(0.1)
     assert not os.path.exists(manager.USER_HISTORY)
 
 
