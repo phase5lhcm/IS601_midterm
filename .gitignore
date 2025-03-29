@@ -19,3 +19,9 @@ Thumbs.db
 
 # Data Files
 history.csv  # Ignores calculation history file
+
+site/
+.coverage
+
+.pre-commit-config.yaml
+
