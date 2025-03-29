@@ -7,6 +7,7 @@ logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
 logger = logging.getLogger(__name__)
+# calculator/singleton/history_manager.py                 42     14    67%   34-36, 61-64, 68-71, 74-78
 
 
 class HistoryManager:
@@ -65,7 +66,7 @@ class HistoryManager:
 
     def recreate_file(self):
         """Recreates the CSV file with headers."""
-        with open(self.FILE_NAME, "w") as file:
+        with open(self.USER_HISTORY, "w") as file:
             file.write("Operation,Operand1,Operand2,Result\n")
         print("New history file created with headers.")
         logger.info("New history file created with headers.")
