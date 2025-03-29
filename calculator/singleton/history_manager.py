@@ -14,7 +14,7 @@ class HistoryManager:
     """A Singleton class that ensures only one instance manages history, which is updated dynamically to history.csv"""
 
     _instance = None
-    USER_HISTORY = "history.csv"
+    USER_HISTORY = os.getenv("CSV_FILE_PATH", "history.csv")
 
     def __new__(cls):
         """new() method is called here to ensure that only one instance is created at the first call. Every subsequent call refers to this instance"""
